@@ -1,59 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-body {
+* {
     background-color: #1D1D1D;
     color: #D2D2D2;
+    outline: 0;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
 }
 
-.conteudo-principal-img {
-    padding-top: 10px;
-    width: 310px;
-    height: 502px;
+.container{
+    width: 100%;
+    height: auto;
 }
-
-.conteudo-principal {
+.home .container, .rodape .container, .principal .titulo .texto .redes{
     display: flex;
-    flex-direction: row;
+}
+
+.container{
+    justify-content: center;
+    gap: 15px;
     align-items: center;
-    justify-content: space-around;
-    font-family: 'Roboto', sans-serif;
-
-}
-
-.conteudo-principal-titulo {
-    font-family: 'Cabin', sans-serif;
-}
-
-.conteudo-principal-escrito-botao {
-    position: relative;
-    width: 200px;
-    height: 50px;
-    background: #27AE60;
-    border-radius: 10px;
-    font-size: 10px;
-    color: #FFFFFF;
-}
-
-.conteudo-principal-subtitulo {
-    color: #A9A9A9;
-}
-
-.cabecalho-imagem {
-    padding-top: 10px;
     padding-left: 70px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px
+}
+
+.destaque {
+    color: #27AE60;
+    font-style: italic;
+}
+
+.principal-img{
+    margin: 0;
+    padding-top: 70px;
+}
+
+.titulo{
+    font-size: 2.9rem;
+    font-weight: bold;
+    font-family: 'cabin', sans-serif;
+    font-style: italic;
+}
+
+.texto {
+    font-size: 1.3rem;
+    font-family: 'roboto', sans-serif;
+    font-weight: bold;
+}
+
+@media (max-width: 1100px){
+    .principal-img{
+        padding-left: 30px;
+        padding-right: 10px;
+        width: 450px;
+    }
+
+    .container{
+        padding-bottom: 70px;
+    }
+
+    .titulo{
+        font-size: 2.5rem;
+        padding-bottom: 30px;
+    }
+
+    .texto{
+        font-size: 1.05rem;
+    }
+    
 }
 
 
-h1 {
-    font-size: 40px;
-}
+@media (max-width: 770px ) {
+    .principal-img{
+        display: none;
+    }
 
-p {
-    font-size: 20px;
+    .home .container, .rodape .container{
+        justify-content: center;
+        padding: 100px;
+    }
+
+    .texto {
+        font-size: 0.98rem;
+    }
 }
